@@ -5,11 +5,15 @@
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
 #include "GameFramework/SaveGame.h"
+#include "GameFramework/Actor.h"
 #include "UObject/FieldIterator.h"
 #include "UObject/Class.h"
 #include "UObject/UnrealType.h"
 #include "Engine/Blueprint.h"
+#include "Kismet/GameplayStatics.h"
 #include "HexagonBattle/HexagonBattle.h"
+#include "HexBat_BattleManager_Base.h"
+#include "HexBat_GridManager_Base.h"
 #include "HexBat_PlayerController_Base.generated.h"
 
 
@@ -30,6 +34,6 @@ class HEXAGONBATTLE_API AHexBat_PlayerController_Base : public APlayerController
 
 		UFUNCTION(BlueprintCallable, Category = "HexBat")
 		void loadGameVariables(USaveGame* saveGame);
+
 		
-	
 };

@@ -28,8 +28,9 @@ void AHexBat_PlayerController_Base::saveGameVariables(USaveGame* saveGame) {
 			if (varController) {
 				varController->CopyCompleteValue(prop->ContainerPtrToValuePtr<void>(saveGame), varController->ContainerPtrToValuePtr<void>(this));
 			}
-			else {
-				UE_LOG(LogTemp, Error, TEXT("Variable was not valid!"));
+			else
+			{
+				HexBat::debugPrint("Variable was not valid!");
 			}
 
 		}
@@ -57,8 +58,9 @@ void AHexBat_PlayerController_Base::loadGameVariables(USaveGame* saveGame) {
 			if (varController) {
 				prop->CopyCompleteValue(varController->ContainerPtrToValuePtr<void>(this),prop->ContainerPtrToValuePtr<void>(saveGame));
 			}
-			else {
-				UE_LOG(LogTemp, Error, TEXT("Variable was not valid!"));
+			else
+			{
+				HexBat::debugPrint("Variable was not valid!");
 			}
 			
 		}
