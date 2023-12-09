@@ -4,7 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "Math/UnrealMathUtility.h"
 #include "HexBat_GridManager_Base.generated.h"
+
 
 /**
  *
@@ -16,6 +18,12 @@ class HEXAGONBATTLE_API AHexBat_GridManager_Base : public AActor {
 
 		UFUNCTION(BlueprintPure, Category = "Utility")
 		void gridToWorld(FVector2D gridLocation,FVector& worldLocation);
+
+		UFUNCTION(BlueprintPure, Category = "Utility")
+		void getSurroundingLocations(FVector2D origin, TArray<FVector2D>& locations);
+
+		UFUNCTION(BlueprintCallable, Category = "Utility")
+		void getCenterAndBounds(TArray<FVector2D> hexes, FVector2D& center, float& bounds);
 
 		
 	
