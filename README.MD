@@ -1,6 +1,4 @@
 # HexBat
-Code for my game HexBat
-
 
 This is the code for my game HexBat.
 
