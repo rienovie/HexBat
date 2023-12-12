@@ -33,8 +33,10 @@ void AHexBat_GridManager_Base::getCenterAndBounds(TArray<FVector2D> hexes, FVect
 	bool initializedValues = false;
 
 	//for each hex
-	for (FVector2D hex : hexes) {
-		if (!initializedValues) {
+	for (FVector2D hex : hexes)
+	{
+		if (!initializedValues)
+		{
 			minX = hex.X;
 			minY = hex.Y;
 			maxX = hex.X;
@@ -49,7 +51,8 @@ void AHexBat_GridManager_Base::getCenterAndBounds(TArray<FVector2D> hexes, FVect
 
 	}
 	boundsHigh = (FMath::Abs(maxX - minX)) / 2.0f;
-	if ((FMath::Abs(maxY - minY) > boundsHigh)){
+	if ((FMath::Abs(maxY - minY) > boundsHigh))
+	{
 		boundsHigh = FMath::Abs(maxY - minY);
 	}
 
@@ -57,6 +60,7 @@ void AHexBat_GridManager_Base::getCenterAndBounds(TArray<FVector2D> hexes, FVect
 	bounds = FMath::Clamp(boundsHigh, 3.0f, 99.0f);
 
 }
+
 
 // Sets default values
 AHexBat_GridManager_Base::AHexBat_GridManager_Base()

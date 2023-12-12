@@ -14,6 +14,7 @@
 #include "HexagonBattle/HexagonBattle.h"
 #include "HexBat_BattleManager_Base.h"
 #include "HexBat_GridManager_Base.h"
+#include "Modules/ModuleManager.h"
 #include "HexBat_PlayerController_Base.generated.h"
 
 
@@ -22,12 +23,9 @@
  * 
  */
 UCLASS()
-class HEXAGONBATTLE_API AHexBat_PlayerController_Base : public APlayerController {
-	
+class HEXAGONBATTLE_API AHexBat_PlayerController_Base : public APlayerController
+{
 	GENERATED_BODY()
-	
-		UFUNCTION(BlueprintCallable, Category = "HexBat")
-		static void testHexBatFunction();
 		
 		UFUNCTION(BlueprintCallable, Category = "HexBat")
 		void saveGameVariables(USaveGame* saveGame);
@@ -35,5 +33,4 @@ class HEXAGONBATTLE_API AHexBat_PlayerController_Base : public APlayerController
 		UFUNCTION(BlueprintCallable, Category = "HexBat")
 		void loadGameVariables(USaveGame* saveGame);
 
-		
 };
